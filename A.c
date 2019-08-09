@@ -10,9 +10,18 @@ int ea(int n,int m,int k)
     }
     else
     {
+	if(n%2==0)
+	{
         b=b+n;
         n=n-(n*m/100);
         ea(n,m,k);
+	}
+	else
+	{	
+        b=b+n;
+        n=n-(n*m/100)-1;
+        ea(n,m,k);
+	}	
     }
 }
 void main()
